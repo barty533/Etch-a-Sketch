@@ -1,22 +1,27 @@
-const content = document.querySelector("body");
-const container = document.createElement("div");
-container.className = "container";
+const content = document.querySelector(".main");
+
 
 
 function createDivs(num){
 
     for(let i=0; i<num; i++)
     {
-        const div = document.createElement("div");
-        div.className = "test";
-        container.append(div);
+        const container = document.createElement("div");
+        container.className = "container";
+        content.appendChild(container);
+        for(let i=0; i<num; i++){
+            const div = document.createElement("div");
+            div.className = "test";   
+            div.addEventListener("mouseover" && "mousedown", function()
+            { div.classList.add("active");});  
+            container.append(div);
+        }
+      
     }
 
 }
 
+createDivs(16);
 
 
 
-content.appendChild(container)
-
-createDivs(256);
