@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+}
+
+
+.test{
+   
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+
+}
