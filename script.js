@@ -11,8 +11,9 @@ function createDivs(num){
         content.appendChild(container);
         for(let i=0; i<num; i++){
             const div = document.createElement("div");
-            div.className = "test";   
-            div.addEventListener("mouseover" && "mousedown", function()
+            div.className = "test";  
+            if(MouseEvent) 
+            div.addEventListener("mousedown", function()
             { div.classList.add("active");});  
             container.append(div);
         }
